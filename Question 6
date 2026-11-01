@@ -1,0 +1,24 @@
+
+class Employee<T, U> {
+    T employeeId;
+    U employeeName;
+
+    Employee(T employeeId, U employeeName) {
+        this.employeeId = employeeId;
+        this.employeeName = employeeName;
+    }
+
+    void display() {
+        System.out.println("Employee ID: " + employeeId);
+        System.out.println("Employee Name: " + employeeName);
+    }
+}
+
+public class Main {
+    public static void main(String[] args) {
+        Employee<Integer, String> e =
+            new Employee<>(101, "Amit");
+
+        e.display();
+    }
+}
