@@ -1,0 +1,26 @@
+
+import java.util.ArrayList;
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        ArrayList<Integer> numbers = new ArrayList<>();
+        Scanner sc = new Scanner(System.in);
+
+        for (int i = 1; i <= 10; i++) {
+            numbers.add(i * 10);
+        }
+
+        System.out.println("Numbers: " + numbers);
+        System.out.print("Enter a number to search: ");
+        int num = sc.nextInt();
+
+        if (numbers.contains(num)) {
+            System.out.println("Number exists in the list.");
+        } else {
+            System.out.println("Number does not exist in the list.");
+        }
+
+        sc.close();
+    }
+}
